@@ -15,12 +15,16 @@
         - chng(u, x):   Add x to the value of the uth leaf. O(log_2(SZ))
     Verification: 
         - https://judge.yosupo.jp/submission/11619       */
-template<int SZ, typename T> struct SegmentTree{
+template<typename T> struct SegmentTree{
+    int SZ;
     T id;
-    T t[(SZ << 2) + 5];
-    SegmentTree(T x): id(x) {}
-    SegmentTree(int *a, T x){
-        id = x;
+    vector<T> t;
+    SegmentTree(T x, int sz): id(x), SZ(sz) {
+        t.assign((SZ << 2) + 5, 0);
+    }
+    SegmentTree(int *a, T x, int sz){
+        id = x; SZ = sz;
+        t.assign((SZ << 2) + 5, 0);
         build(1, 0, SZ - 1, a);
     }
     T cmb(T x, T y){ return x + y;}
@@ -47,7 +51,7 @@ template<int SZ, typename T> struct SegmentTree{
             int tm = tl + (tr - tl)/2;
             if(u > tm) upd((v << 1) | 1, tm + 1, tr, u, x);
             else upd(v << 1, tl, tm, u, x);
-            t[v] = cmb(t[v << 1] + t[(v << 1) | 1]);
+            t[v] = cmb(t[v << 1], t[(v << 1) | 1]);
         }
     }
     void chng(int u, T x){ chng(1, 0, SZ - 1, u, x);}

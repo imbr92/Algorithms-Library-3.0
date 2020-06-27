@@ -13,11 +13,14 @@
                         Uses union by rank heuristic. Amortized O(\alpha(SZ))
     Verification: 
         - https://judge.yosupo.jp/submission/11571       */
-template<int SZ> struct DSU{
-    int p[SZ], r[SZ], s[SZ];
-    DSU(){
-        fill(s, s + SZ, 1);
-        iota(p, p + SZ, 0);
+struct DSU{
+    int SZ;
+    vector<int> p, r, s;
+    DSU(int sz): SZ(sz){
+        p.assign(SZ, 0);
+        iota(p.begin(), p.end(), 0);
+        r.assign(SZ, 0);
+        s.assign(SZ, 1);
     }
     int find(int u){
         if(p[u] != u) p[u] = find(p[u]);

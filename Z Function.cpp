@@ -6,16 +6,19 @@
         - O(n)
     Verification: 
         - https://judge.yosupo.jp/submission/11658      */
-template<typename T> vector<int> calc(T &s) {
-    int n = sz(s);
+template<typename T> vector<int> calc(T &str){
+    int n = sz(str);
     vector<int> z(n);
-    for (int i = 0, l = 0, r = 0; i < n; ++i) {
-        if (i <= r)
-            z[i] = min (r - i + 1, z[i - l]);
-        while (i + z[i] < n && s[z[i]] == s[i + z[i]])
+    for(int i = 0, l = 0, r = 0; i < n; ++i){
+        if(i <= r){
+            z[i] = min(r - i + 1, z[i - l]);
+        }
+        while(i + z[i] < n && str[z[i]] == str[i + z[i]]){
             ++z[i];
-        if (i + z[i] - 1 > r)
+        }
+        if(i + z[i] - 1 > r){
             l = i, r = i + z[i] - 1;
+        }
     }
     return z;
 }

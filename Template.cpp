@@ -11,6 +11,9 @@ typedef long long ll;
 #define f first
 #define s second
 
+template<typename T, typename U> bool ckmin(T &a, U b){ return b < a ? a = b, true : false; }
+template<typename T, typename U> bool ckmax(T &a, U b){ return b > a ? a = b, true : false; }
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

@@ -11,14 +11,17 @@ This is my C++ algorithms library that I use for programming contests. It is cur
 * Data Structures
     * Disjoint Set Union (DSU)
     * Segment Tree
+* Dynamic Programming
+    * Convex Hull Trick (Line Container)
 * Geometry
     *
 * Graphs
-    * 
+    * Centroid Decomposition
 * Linear Algebra
     * Xor Basis
 * Number Theory
     * 
 * Strings
     * Z Function
-    * 
+    * Prefix Function
+    * Rolling Hash
