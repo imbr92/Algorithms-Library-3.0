@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Standard Z function algorithm (returns z[] where z[i] = LCP b/w s[i, n] and s)
+        - Z function algorithm (returns z[] where z[i] = LCP b/w s[i, n] and s)
     Parts:
         - T = Argument type (usually string)
     Complexity: 

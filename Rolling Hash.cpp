@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Standard polynomial Rolling Hash (Single modulo)
+        - Polynomial Rolling Hash (Single modulo)
     Parts
         - MOD = inputted modulus, try ~1e9
         - al = alphabet size

@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Convex Hull Trick Data Structure (Line Container). Query max at x, Add line to envelope
+        - Convex hull trick data structure (Line Container). Query max at x, Add line to envelope
     Parts
         - INF = Infinity for datatype
     Methods:
@@ -13,7 +13,8 @@
           lines (-m, -b) and -qry(x) is y.
     Source: KACTL
     Verification: 
-        - https://judge.yosupo.jp/submission/13991       */
+        - https://judge.yosupo.jp/submission/13991
+        - https://codeforces.com/contest/1303/submission/85247906       */
 struct Line{
     mutable ll m, b, p;
     bool operator<(const Line& l) const { return m < l.m; }

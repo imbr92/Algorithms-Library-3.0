@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Standard prefix function algorithm (returns pi[] where pi[i] = Longest prefix of s which is a suffix of s[0, i])
+        - Prefix function algorithm (returns pi[] where pi[i] = Longest prefix of s which is a suffix of s[0, i])
     Parts:
         - T = Argument type (usually string)
     Complexity: 

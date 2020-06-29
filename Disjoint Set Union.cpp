@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Standard disjoint set union (union find) data structure
+        -  Disjoint set union (union find) data structure
     Parts
         - SZ = # of nodes
         - p[i] = parent of ith node

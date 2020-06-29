@@ -1,5 +1,6 @@
 /*  Overview: 
-        - Standard centroid decomposition
+        - Centroid Decomposition. Builds centroid tree connecting centroids of the original tree 
+          and its recursively split components after the centroids are removed  
     Parts
         - g[][] = adjacency list of original tree
         - adj[][] = adjacency list of tree after centroid decomposition
@@ -16,7 +17,8 @@
         - decomp():         Driver for entire decomposition. O(SZ log_2(SZ))
     Verification: 
         - https://codeforces.com/contest/716/submission/85067920
-        - https://codeforces.com/contest/342/submission/84929339    */
+        - https://codeforces.com/contest/342/submission/84929339
+        - https://codeforces.com/contest/1303/submission/85247906       */
 struct CD{
     int SZ, _n, rt = -1;
     vector<bool> dead;

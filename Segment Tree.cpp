@@ -1,5 +1,5 @@
 /*  Overview: 
-        - Standard range sum segment tree data structure
+        - Segment tree data structure (default range sum)
     Parts
         - SZ = # of leaves
         - t[i] = ith node of the tree (ordered like heap)
@@ -22,13 +22,13 @@ template<typename T> struct SegmentTree{
     SegmentTree(T x, int sz): id(x), SZ(sz) {
         t.assign((SZ << 2) + 5, 0);
     }
-    SegmentTree(int *a, T x, int sz){
+    SegmentTree(vector<T> &a, T x, int sz){
         id = x; SZ = sz;
         t.assign((SZ << 2) + 5, 0);
         build(1, 0, SZ - 1, a);
     }
     T cmb(T x, T y){ return x + y;}
-    void build(int v, int tl, int tr, int *a){
+    void build(int v, int tl, int tr, vector<T> &a){
         if(tl == tr) t[v] = a[tl];
         else{
             int tm = tl + (tr - tl)/2;
@@ -37,14 +37,14 @@ template<typename T> struct SegmentTree{
             t[v] = cmb(t[v << 1], t[(v << 1) | 1]);
         }
     }
-    T qry(int l, int r){ return qry(1, 0, SZ - 1, l, r);};
+    T qry(int l, int r){ return qry(1, 0, SZ - 1, l, r);}
     T qry(int v, int tl, int tr, int l, int r){
         if(l > r) return id;
         if(tl == l && tr == r) return t[v];
         int tm = tl + (tr - tl)/2;
         return cmb(qry(v << 1, tl, tm, l, min(r, tm)), qry((v << 1) | 1, tm + 1, tr, max(l, tm + 1), r));
     }
-    void upd(int u, T x){ upd(1, 0, SZ - 1, u, x);};
+    void upd(int u, T x){ upd(1, 0, SZ - 1, u, x);}
     void upd(int v, int tl, int tr, int u, T x){
         if(tl == tr) t[v] = x;
         else{
