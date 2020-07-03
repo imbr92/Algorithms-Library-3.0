@@ -12,6 +12,7 @@ This is my C++ algorithms library that I use for programming contests. It is cur
     * Disjoint Set Union (DSU)
     * Lazy Segment Tree
     * Segment Tree
+    * Sparse Table
 * Dynamic Programming
     * Convex Hull Trick (Line Container)
 * Geometry
@@ -24,6 +25,7 @@ This is my C++ algorithms library that I use for programming contests. It is cur
 * Number Theory
     * 
 * Strings
-    * Z Function
     * Prefix Function
     * Rolling Hash
+    * Suffix Array
+    * Z Function

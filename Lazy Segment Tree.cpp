@@ -16,21 +16,17 @@
                             in case the push requires using number of elements covered by
                             that node. O(1)
     Verification: 
+        - https://codeforces.com/contest/1371/submission/85786163 
         - https://codeforces.com/contest/1373/submission/85493826
         - https://judge.yosupo.jp/submission/14244       */
 
-template<typename T> struct LazySegmentTree{
+template<typename T, typename S> struct LazySegmentTree{
     int SZ;
     T id;
-    vector<T> t, lazy;
-    LazySegmentTree(T x, int sz): id(x), SZ(sz) {
-        t.assign((SZ << 2) + 5, 0);
-        lazy.assign((SZ << 2) + 5, 0);
-    }
-    LazySegmentTree(vector<T> &a, T x, int sz){
-        id = x; SZ = sz;
-        t.assign((SZ << 2) + 5, 0);
-        lazy.assign((SZ << 2) + 5, 0);
+    vector<T> t;
+    vector<S> lazy;
+    LazySegmentTree(T x, int sz): id(x), SZ(sz), lazy((SZ << 2) + 5), t((SZ << 2) + 5) {}
+    LazySegmentTree(vector<T> &a, T x, int sz): id(x), SZ(sz), lazy((SZ << 2) + 5), t((SZ << 2) + 5){
         build(1, 0, SZ - 1, a);
     }
     void push(int v, int tl, int tr){
@@ -69,6 +65,7 @@ template<typename T> struct LazySegmentTree{
         if(l > r) return;
         int tm = tl + (tr - tl)/2;
         if(tl == l && tr == r){
+            //change lazy op based on lazy
             lazy[v] += x;
             t[v] += x;
         }

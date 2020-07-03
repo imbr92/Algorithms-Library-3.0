@@ -7,7 +7,7 @@
         CHANGE cmb() TO CHANGE OPERATION
     Methods:
         - cmb(x, y):    Returns combined value of x and y (performs segtree 
-                        binary operation). O(SZ)
+                        binary operation). O(1)
         - build():      Builds initial segment tree. O(SZ)
         - qry(l, r):    Returns value of binary operation over range [l, r].
                         O(log_2(SZ))
