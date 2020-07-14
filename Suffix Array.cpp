@@ -23,7 +23,7 @@
         - https://codeforces.com/edu/course/2/lesson/2/5/practice/contest/269656/submission/85789969
         - https://codeforces.com/edu/course/2/lesson/2/5/practice/contest/269656/submission/85801898        */
 
-// Sparse Table included for convenience (same as SparseTable.cpp)
+// Sparse Table included for convenience (same as "Sparse Table.cpp")
 template<typename T> struct SparseTable{
     int SZ, L;
     vector<int> logs;

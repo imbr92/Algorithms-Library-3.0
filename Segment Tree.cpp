@@ -20,11 +20,11 @@ template<typename T> struct SegmentTree{
     T id;
     vector<T> t;
     SegmentTree(T x, int sz): id(x), SZ(sz) {
-        t.assign((SZ << 2) + 5, 0);
+        t.assign((SZ << 2) + 5, id);
     }
     SegmentTree(vector<T> &a, T x, int sz){
         id = x; SZ = sz;
-        t.assign((SZ << 2) + 5, 0);
+        t.assign((SZ << 2) + 5, id);
         build(1, 0, SZ - 1, a);
     }
     T cmb(T x, T y){ return x + y;}
