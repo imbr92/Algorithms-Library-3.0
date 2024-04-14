@@ -20,6 +20,7 @@ template<int SZ, typename T> struct XorBasis{
     T basis[SZ];
     XorBasis(){
         sz = 0;
+        memset(basis, 0, sizeof(basis));
     }
     void insert(T vec){
         for(int i = 0; i < SZ; ++i){

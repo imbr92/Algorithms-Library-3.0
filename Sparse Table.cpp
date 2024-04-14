@@ -17,11 +17,11 @@ template<typename T> struct SparseTable{
     vector<int> logs;
     vector<vector<T>> table;
     T cmb(T x, T y){ return min(x, y); }
-    SparseTable(int size, vector<T> &v): SZ(size){
+    SparseTable(T id, int size, vector<T> &v): SZ(size){
         L = log2(SZ) + 1;
         logs.assign(SZ + 1, 0);
         for(int i = 2; i <= SZ; ++i) logs[i] = logs[i >> 1] + 1;
-        table.assign(L + 1, vector<T>(SZ, 0));
+        table.assign(L + 1, vector<T>(SZ, id));
         build(v);
     }
     void build(vector<T> &v){

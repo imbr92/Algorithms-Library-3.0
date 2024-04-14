@@ -20,6 +20,7 @@ This is my C++ algorithms library that I use for programming contests. It is cur
 * Graphs
     * Centroid Decomposition
     * Dijkstra
+    * Minimum Diameter Spanning Tree (MDST)
 * Linear Algebra
     * Xor Basis
 * Number Theory
@@ -30,3 +31,38 @@ This is my C++ algorithms library that I use for programming contests. It is cur
     * Suffix Array
     * Z Function
 
+# Things To Add 
+* Articulation Points and Bridges
+* Biconnected Components and Block-Cut Tree
+* Strongly Connected Components
+* Topological Sort
+* Least Common Ancestor (Binary Lifting)
+* Chinese Remainder Theorem
+* Modular Inverse, Exponentiation, Choose, Factorials
+* Bellman-Ford
+* Floyd Warshall
+* KMP Automaton
+* Montgomery Multiplication
+* Moore's Voting Algorithm
+* Mo's Algorithm
+* Linear Sieve, Query Sieve
+* Prim
+* Kruskal
+* Rerooting DP
+* Trie
+* Convex Hull
+* Miller Rabin
+* Pollard Rho
+* Tonelli-Shanks
+* Discrete Log (Baby Step Giant Step)
+* Polynomial Library
+* Modular Integer Library
+* Big Integer Library
+* Lagrange Multipliers (Alien's Trick)
+* Euler Tour/Cycle (Hierholzer)
+* Manacher's Algorithm
+* Aho-Corasick
+* Polar Sorting
+* Segment/Line Intersections
+* Nim Multiplication and Sprague-Grundy stuff?
+* Binary GCD Algorithm
