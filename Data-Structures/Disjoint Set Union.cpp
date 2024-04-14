@@ -30,6 +30,7 @@ struct DSU{
         u = find(u); v = find(v);
         if(u == v) return;
         if(r[u] < r[v]) swap(u, v);
-        r[u]++, s[u] += s[v], p[v] = u;
+        if(r[u] == r[v]) ++r[u];
+        s[u] += s[v], p[v] = u;
     }
 };
