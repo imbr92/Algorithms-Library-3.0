@@ -15,12 +15,16 @@ This is my C++ algorithms library that I use for programming contests. It is cur
     * Sparse Table
 * Dynamic Programming
     * Convex Hull Trick (Line Container)
+    * SOS Convolutions
 * Geometry
     *
 * Graphs
     * Centroid Decomposition
     * Dijkstra
     * Minimum Diameter Spanning Tree (MDST)
+    * 2SAT
+    * LCA (Binary Lifting)
+    * Strongly Connected Components
 * Linear Algebra
     * Xor Basis
 * Number Theory
