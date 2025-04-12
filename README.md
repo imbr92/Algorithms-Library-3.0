@@ -1,6 +1,6 @@
 # Algorithms Library 3.0
 
-This is my C++ algorithms library that I use for programming contests. It is currently a WIP since I am in the process of rewriting my old algorithms library. 
+This is my C++ algorithms library that I use for programming contests. It is currently a WIP since I am in the process of rewriting my old algorithms library. Note that some of this code is copied/adapted from other sources. I have tried to link the source within the code if not original.
 
 ## Contents
 
